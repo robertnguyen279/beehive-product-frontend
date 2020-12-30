@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.9
+    steps:
+      - checkout
+      - run: yarn install
+      - run: CI=true yarn build
+  test:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: yarn test
+
+workflows:
+  version: 2
+  test_my_app:
+    jobs:
+      - build
+      - test
