@@ -138,9 +138,8 @@ export default {
     new ForkTsCheckerWebpackPlugin(),
     // Generate html file to dist folder
     new HtmlWebpackPlugin({
-      title: 'Boilerplate',
       template: path.resolve(__dirname, 'public/index.html'),
-      favicon: 'public/favicon.ico',
+      favicon: path.resolve(__dirname, 'public/favicon.ico'),
     }),
   ],
 
