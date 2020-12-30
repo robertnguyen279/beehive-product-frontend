@@ -19,4 +19,4 @@ jobs:
       - name: Build React App
         run: yarn install && yarn build
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync ./dist/ s3://beehive-static-webapp --delete
+        run: aws s3 sync ./dist/prod s3://beehive-static-webapp --delete
