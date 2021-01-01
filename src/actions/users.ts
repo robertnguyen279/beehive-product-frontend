@@ -1,4 +1,4 @@
-import { Action } from 'types/global';
+import { Action } from 'types/main';
 
 export const Types = {
   GET_USER_SUCCESS: 'user/get-user-success',
