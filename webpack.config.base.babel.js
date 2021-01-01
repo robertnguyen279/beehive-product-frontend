@@ -5,7 +5,7 @@ import path from 'path';
 import cssnano from 'cssnano';
 import postcssImport from 'postcss-import';
 import postcssPresetEnv from 'postcss-preset-env';
-
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 // import DotenvPlugin from 'dotenv-webpack';
 import DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpack-plugin';
@@ -144,6 +144,14 @@ export default {
       template: path.resolve(__dirname, 'public/index.html'),
       favicon: path.resolve(__dirname, 'public/favicon.ico'),
     }),
+
+    // Copy static files to build dir
+    new CopyWebpackPlugin([
+      {
+        from: 'public',
+        ignore: ['index.html', 'favicon.ico'],
+      },
+    ]),
   ],
 
   // Change how modules are resolved
