@@ -56,7 +56,9 @@ export default {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: () => [postcssImport, postcssPresetEnv, cssnano],
+              postcssOptions: {
+                plugins: () => [postcssImport, postcssPresetEnv, cssnano],
+              },
             },
           },
         ],
@@ -70,7 +72,6 @@ export default {
             loader: 'css-loader',
             options: {
               sourceMap: !devMode,
-              modules: true,
               importLoaders: 2,
             },
           },
@@ -78,7 +79,9 @@ export default {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: () => [postcssImport, postcssPresetEnv, cssnano],
+              postcssOptions: {
+                plugins: () => [postcssImport, postcssPresetEnv, cssnano],
+              },
             },
           },
           { loader: 'sass-loader', options: { sourceMap: true } },

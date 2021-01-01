@@ -2,7 +2,7 @@ import React from 'react';
 import ContentLoader from 'react-content-loader';
 
 export const BodyContentLoader = (): React.ReactElement => (
-  <div>
+  <div className="m-auto">
     <ContentLoader
       height={200}
       width={400}
