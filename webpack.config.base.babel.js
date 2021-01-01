@@ -149,6 +149,7 @@ export default {
     new CopyWebpackPlugin([
       {
         from: 'public',
+        to: 'public',
         ignore: ['index.html', 'favicon.ico'],
       },
     ]),
