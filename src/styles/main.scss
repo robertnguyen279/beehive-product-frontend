@@ -1,0 +1,15 @@
+@import 'global';
+@import 'mixins';
+
+// Taildwind
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// Animate.style
+@import 'animate';
+
+// Pages
+@import 'pages/homePage';
+
+// Components
