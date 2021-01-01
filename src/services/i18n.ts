@@ -19,7 +19,7 @@ export default i18n
       interpolation: {
         escapeValue: false, // not needed for react.
       },
-      ns: ['homePage'],
+      ns: [],
       react: {
         wait: false,
       },
