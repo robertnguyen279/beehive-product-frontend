@@ -13,6 +13,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ProgressBarWebpackPlugin from 'progress-bar-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -161,5 +162,6 @@ export default {
     modules: ['node_modules', 'src'],
     // Automatically resolve certain extensions (Ex. import 'folder/name(.ext)')
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss'],
+    plugins: [new TsconfigPathsPlugin()],
   },
 };

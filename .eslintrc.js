@@ -11,6 +11,9 @@ module.exports = {
     react: {
       version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
     },
+    'import/resolver': {
+      alias: [['public', './public']],
+    },
   },
   extends: [
     'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react

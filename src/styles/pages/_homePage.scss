@@ -1,0 +1,142 @@
+.home__container {
+  background: url('/public//imgs/login-background.jpg');
+}
+
+.home__layer--dark {
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+.home__header {
+  max-width: 75rem;
+}
+
+.home__header__right__cart {
+  border-radius: 1.25rem;
+}
+
+.home__header__right {
+  min-width: 10rem;
+}
+
+.home__header__right__slider-button__bar-1,
+.home__header__right__slider-button__bar-3 {
+  width: 1.5rem;
+  height: 0.125rem;
+  background-color: $primary;
+  border-radius: 0.25em;
+  color: transparent;
+}
+
+.home__header__right__slider-button__bar-1 span,
+.home__header__right__slider-button__bar-3 span,
+.home__header__right__slider-button__bar-2 span {
+  opacity: 0;
+}
+
+.home__header__right__slider-button__bar-2 {
+  width: 1rem;
+  height: 0.125rem;
+  background-color: $primary;
+  border-radius: 0.25em;
+  color: transparent;
+  margin: 0.25em 0;
+}
+
+.home__header__right__slider-button__bar-1--active {
+  @extend .home__header__right__slider-button__bar-1;
+  position: absolute;
+  top: 0.125rem;
+  animation: bar-1-active 0.5s forwards;
+}
+
+@keyframes bar-1-active {
+  // 0 45 75 100
+  100% {
+    transform: rotate(135deg);
+  }
+  75% {
+    transform: rotate(130deg);
+  }
+  45% {
+    transform: rotate(145deg);
+  }
+  0% {
+    transform: rotate(0);
+  }
+}
+
+.home__header__right__slider-button__bar-3--active {
+  @extend .home__header__right__slider-button__bar-3;
+  position: absolute;
+  top: 0.125rem;
+
+  animation: bar-3-active 0.5s forwards;
+}
+
+@keyframes bar-3-active {
+  100% {
+    transform: rotate(-135deg);
+  }
+  75% {
+    transform: rotate(-130deg);
+  }
+  45% {
+    transform: rotate(-145deg);
+  }
+  0% {
+    transform: rotate(0);
+  }
+}
+
+.home__header__right__slider-button__bar-2--active {
+  @extend .home__header__right__slider-button__bar-2;
+  opacity: 0;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.home__header__right__slider-button__bar-1--inactive {
+  @extend .home__header__right__slider-button__bar-1;
+  animation: bar-1-inactive 0.5s forwards;
+}
+
+.home__header__right__slider-button__bar-3--inactive {
+  @extend .home__header__right__slider-button__bar-3;
+  animation: bar-3-inactive 0.5s forwards;
+}
+
+.home__header__right__slider-button__bar-2--inactive {
+  @extend .home__header__right__slider-button__bar-2;
+}
+
+@keyframes bar-1-inactive {
+  // 0 45 75 100
+  0% {
+    transform: rotate(135deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes bar-3-inactive {
+  0% {
+    transform: rotate(-135deg);
+  }
+  45% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
