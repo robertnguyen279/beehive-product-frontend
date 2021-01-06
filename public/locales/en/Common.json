@@ -1,0 +1,6 @@
+{
+  "form-required": "This field is required",
+  "form-email-error": "Email is invalid",
+  "form-email-placeholder": "Email",
+  "form-password-placeholder": "Password"
+}

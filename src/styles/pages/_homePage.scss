@@ -1,5 +1,5 @@
 .home__container {
-  background: url('/public//imgs/login-background.jpg');
+  background: url('/assets/imgs/login-background.jpg');
   background-position: bottom right;
   transition: 0.3s;
   transform: translateX(0);
@@ -42,8 +42,11 @@
     animation: moving 20s linear infinite;
   }
 
-  .home__layer--dark {
+  .home__layer {
     background-color: rgba(0, 0, 0, 0.815);
+  }
+  .home__layer-2 {
+    background-color: rgba(0, 0, 0, 0.24);
   }
 
   .home__header {

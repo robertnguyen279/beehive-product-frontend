@@ -1,5 +1,5 @@
 {
-  "welcome": "Chào mừng với Beehive",
+  "welcome": "Chào mừng",
   "login-button": "Đăng nhập",
   "join-club": "Tham gia với chúng tôi",
   "join-club-description": "Tham gia ngay để trải nghiệm mạng xã hội hoàn toàn mới",
@@ -8,5 +8,6 @@
   "login-left-onlineshop": "Online Shop",
   "login-left-onlineshop-description": "Mua sắm online thỏa thích",
   "login-left-jobsearch": "Việc làm",
-  "login-left-jobsearch-description": "Tìm kiếm việc làm quanh bạn"
+  "login-left-jobsearch-description": "Tìm kiếm việc làm quanh bạn",
+  "join-with-people": "Online cùng hàng ngàn người khác"
 }

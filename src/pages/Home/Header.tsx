@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from 'public/icons/white-logo.svg';
-import Cart from 'public/icons/shopping-cart.svg';
+import Logo from 'assets/icons/white-logo.svg';
+import Cart from 'assets/icons/shopping-cart.svg';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenuSldier } from 'actions/ui';
