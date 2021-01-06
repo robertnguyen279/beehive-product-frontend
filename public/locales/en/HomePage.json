@@ -1,4 +1,12 @@
 {
   "welcome": "Welcome to Beehive",
-  "login-button": "Login"
+  "login-button": "Login",
+  "join-club": "Join the club",
+  "join-club-description": "Join us now to explore new social network experience",
+  "login-left-community": "Community",
+  "login-left-community-description": "Share your experience with big community",
+  "login-left-onlineshop": "Online Shop",
+  "login-left-onlineshop-description": "Explore our big online shopping system",
+  "login-left-jobsearch": "Job search",
+  "login-left-jobsearch-description": "Search for jobs near your location"
 }

@@ -149,8 +149,8 @@ export default {
     // Copy static files to build dir
     new CopyWebpackPlugin([
       {
-        from: 'public',
-        to: 'public',
+        from: 'public/locales',
+        to: 'public/locales',
         ignore: ['index.html', 'favicon.ico'],
       },
     ]),

@@ -20,6 +20,13 @@
   }
 }
 
+// Medium devices up
+@mixin md-up {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
 // Large devices
 
 @mixin lg {
