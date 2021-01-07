@@ -27,6 +27,13 @@
   }
 }
 
+// Medium devices up
+@mixin md-down {
+  @media (max-width: #{$screen-md-min - 1px}) {
+    @content;
+  }
+}
+
 // Large devices
 
 @mixin lg {

@@ -9,3 +9,11 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+.text-primary {
+  color: $primary;
+}
+
+.hover-primary:hover {
+  color: $primary;
+}

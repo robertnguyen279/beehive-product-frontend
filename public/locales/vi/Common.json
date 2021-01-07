@@ -2,5 +2,8 @@
   "form-required": "Bạn phải nhập mục này",
   "form-email-error": "Email không hợp lệ",
   "form-email-placeholder": "Email",
-  "form-password-placeholder": "Password"
+  "form-password-placeholder": "Password",
+  "form-password-lost": "Quên mật khẩu",
+  "button-login": "Đăng nhập",
+  "form-or-sign-up": "Hoặc đăng ký ngay"
 }

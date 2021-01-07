@@ -26,8 +26,11 @@ const HeaderHome = (): React.ReactElement => {
   };
 
   return (
-    <div className="home__header z-10 relative xl:h-32 lg:h-24 h-20 m-auto flex justify-between items-center md:py-7 py-5">
-      <div className="home__header__logo w-52 px-5">
+    <div
+      className={`home__header z-10 relative xl:h-32 lg:h-24 h-20 m-auto flex justify-between items-center md:py-7 py-5`}
+      id="login-header"
+    >
+      <div className="home__header__logo w-52 px-5 cursor-pointer">
         <img src={Logo} alt="logo" />
       </div>
       <div className="home__header__right flex items-center text-white text-base justify-start">

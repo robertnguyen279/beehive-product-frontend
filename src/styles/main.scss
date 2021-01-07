@@ -1,5 +1,5 @@
-@import 'global';
 @import 'mixins';
+@import 'global';
 
 // Taildwind
 @import 'tailwindcss/base';
@@ -14,3 +14,4 @@
 
 // Components
 @import 'components/form';
+@import 'components/button';

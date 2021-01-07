@@ -9,18 +9,20 @@ const Input = ({
   onChange,
   prefixIcon,
   style,
+  error,
   ...config
 }: InputType): React.ReactElement => {
   return (
-    <div className={`form__input relative ${className ? className : ''}`} style={{ ...style }}>
+    <div className={`form__input${error ? '--error' : ''} relative ${className ? className : ''}`} style={{ ...style }}>
       <input
         type={type}
         value={value}
         name={name}
-        onChange={(e) => onChange(e)}
+        onChange={onChange}
         {...config}
-        className={`bg-gray-50 ${prefixIcon ? 'pr-5 pl-12' : 'px-5'} font-xl w-full h-full`}
+        className={`bg-gray-50 ${prefixIcon ? 'pr-5 pl-12' : 'px-5'} font-xl w-full h-10`}
       />
+      <span className="relative text-sm text-red-600">{error}</span>
 
       {prefixIcon && (
         <div className="form__icon-prefix h-full absolute bg-white flex items-center justify-center">

@@ -13,6 +13,7 @@ export interface InputType {
   placeholder?: string;
   name: string;
   className?: string;
+  error: boolean | string | undefined;
 }
 
 export interface CheckBoxType {
@@ -20,4 +21,13 @@ export interface CheckBoxType {
   label: string;
   value: string;
   className?: string;
+  onChange: (value: React.FormEvent<HTMLInputElement>) => void;
+}
+
+export interface ButtonType {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: (e: React.MouseEvent) => void;
+  isLoading?: boolean;
+  type?: 'submit';
 }

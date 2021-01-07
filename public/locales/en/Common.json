@@ -2,5 +2,8 @@
   "form-required": "This field is required",
   "form-email-error": "Email is invalid",
   "form-email-placeholder": "Email",
-  "form-password-placeholder": "Password"
+  "form-password-placeholder": "Password",
+  "form-password-lost": "Forget password?",
+  "button-login": "Log into your account",
+  "form-or-sign-up": "Or sign up now"
 }

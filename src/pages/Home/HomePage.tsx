@@ -24,7 +24,7 @@ function HomePage(): React.ReactElement {
         <HeaderHome />
         <LoginContainer isLaptop={isLaptop} />
         <HomeSlider />
-        <div className="home__layer absolute w-full h-full inset-0"></div>
+        <div className="home__layer absolute w-full h-20 md:h-full inset-0"></div>
         {openMenuSlider && (
           <div
             className="home__layer-2 absolute w-full h-full inset-0 z-20 cursor-pointer"

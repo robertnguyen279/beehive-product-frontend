@@ -38,10 +38,6 @@
     }
   }
 
-  @include md-up {
-    animation: moving 20s linear infinite;
-  }
-
   .home__layer {
     background-color: rgba(0, 0, 0, 0.815);
   }
@@ -51,6 +47,16 @@
 
   .home__header {
     max-width: 75rem;
+
+    &--sticky {
+      @extend .home__header;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.479);
+      height: 10rem;
+    }
 
     .home__header__right {
       min-width: 12rem;
@@ -119,6 +125,33 @@
       .home__header__right__slider-button__bar-2--inactive {
         @extend .home__header__right__slider-button__bar-2;
       }
+    }
+  }
+}
+
+@include md-up {
+  .home__container {
+    animation: moving 20s linear infinite;
+  }
+}
+
+@include md-down {
+  .home__container {
+    background: rgba(0, 0, 0, 0.815) !important;
+  }
+  .home__login-container {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    height: auto !important;
+    width: 100% !important;
+
+    .home__login-container__left {
+      height: auto !important;
+      background-color: $primary !important;
     }
   }
 }
