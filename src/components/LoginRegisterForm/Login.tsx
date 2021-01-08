@@ -109,7 +109,6 @@ const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
       <div className="text-sm text-primary cursor-pointer" onClick={() => onChange()}>
         {t('Common:form-or-sign-up')}
       </div>
-      ;
     </form>
   );
 };
