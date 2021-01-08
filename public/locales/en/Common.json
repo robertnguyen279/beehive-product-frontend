@@ -8,5 +8,7 @@
   "form-password-lost": "Forget password?",
   "button-login": "Log into your account",
   "form-or-sign-up": "Or sign up now",
-  "checkbox-remember": "Remember"
+  "checkbox-remember": "Remember",
+  "button-signup": "Sign up",
+  "form-or-login": "Or login"
 }

@@ -75,7 +75,7 @@ const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
       <Button className="w-4/6 mb-2" type="submit">
         {t('Common:button-login')}
       </Button>
-      <div className="flex w-4/6 justify-center items-center pb-3">
+      <div className="flex w-4/6 justify-center items-center py-3">
         <GoogleLogin
           clientId="22234867800-4shnc1g407oks72lciep89ht3kdaeqfn.apps.googleusercontent.com"
           buttonText="Login"

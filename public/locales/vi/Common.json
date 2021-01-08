@@ -8,5 +8,7 @@
   "form-password-lost": "Quên mật khẩu",
   "button-login": "Đăng nhập",
   "form-or-sign-up": "Hoặc đăng ký ngay",
-  "checkbox-remember": "Ghi nhớ"
+  "checkbox-remember": "Ghi nhớ",
+  "button-signup": "Đăng ký",
+  "form-or-login": "Hoặc đăng nhập"
 }

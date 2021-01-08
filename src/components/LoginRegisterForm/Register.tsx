@@ -64,10 +64,10 @@ const Register = ({ onChange }: LoginRegisterForm): React.ReactElement => {
         error={formik.errors.confirmPassword && formik.touched.confirmPassword ? formik.errors.confirmPassword : false}
       />
       <Button className="w-4/6 mb-2" type="submit">
-        {t('Common:button-login')}
+        {t('Common:button-signup')}
       </Button>
       <div className="text-sm text-primary cursor-pointer" onClick={() => onChange()}>
-        {t('Common:form-or-sign-up')}
+        {t('Common:form-or-login')}
       </div>
       ;
     </form>
