@@ -3,3 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.hover-primary:hover {
+  color: $primary;
+}
+
+.collapse__items {
+  border-left: 3px solid;
+}

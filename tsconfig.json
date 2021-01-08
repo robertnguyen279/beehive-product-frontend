@@ -9,11 +9,12 @@
     "esModuleInterop": true,
     "noEmitOnError": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "sourceMap": true,
     "strict": true,
-    "types": ["eslint", "node"]
+    "types": ["eslint", "node"],
+    "paths": {
+      "public/*": ["../public/*"]
+    }
   },
   "exclude": ["node_modules", "**/__tests__/**"]
 }

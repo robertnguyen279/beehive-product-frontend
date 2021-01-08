@@ -20,6 +20,20 @@
   }
 }
 
+// Medium devices up
+@mixin md-up {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Medium devices up
+@mixin md-down {
+  @media (max-width: #{$screen-md-min - 1px}) {
+    @content;
+  }
+}
+
 // Large devices
 
 @mixin lg {
