@@ -31,3 +31,7 @@ export interface ButtonType {
   isLoading?: boolean;
   type?: 'submit';
 }
+
+export interface LoginRegisterForm {
+  onChange: () => void;
+}

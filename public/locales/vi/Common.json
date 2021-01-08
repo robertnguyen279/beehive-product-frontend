@@ -2,8 +2,11 @@
   "form-required": "Bạn phải nhập mục này",
   "form-email-error": "Email không hợp lệ",
   "form-email-placeholder": "Email",
-  "form-password-placeholder": "Password",
+  "form-password-placeholder": "Mật khẩu",
+  "form-password-confirm-placeholder": "Nhập lại mật khẩu",
+  "form-password-confirm-error": "Mật khẩu không trùng khớp",
   "form-password-lost": "Quên mật khẩu",
   "button-login": "Đăng nhập",
-  "form-or-sign-up": "Hoặc đăng ký ngay"
+  "form-or-sign-up": "Hoặc đăng ký ngay",
+  "checkbox-remember": "Ghi nhớ"
 }

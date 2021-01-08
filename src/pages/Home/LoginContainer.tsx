@@ -59,7 +59,7 @@ const LoginContainer = ({ isLaptop }: HomeChild): React.ReactElement => {
   );
 
   const renderRightLogin = () => (
-    <div className="md:w-1/2 h-full bg-white flex flex-col items-center justify-center sm:py-16 py-10">
+    <div className="md:w-1/2 h-full overflow-hidden bg-white flex flex-col items-center justify-center sm:py-16 py-10">
       <div className="w-16 py-3">
         <img src={LogoIcon} alt="logo-icon" />
       </div>

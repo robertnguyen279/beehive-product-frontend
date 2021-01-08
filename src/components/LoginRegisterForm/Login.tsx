@@ -6,8 +6,14 @@ import Button from 'components/Button';
 import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { LoginRegisterForm } from 'types/main';
+import GoogleLogin from 'react-google-login';
+import GoogleIcon from 'assets/icons/google.svg';
+import FacebookIcon from 'assets/icons/facebook.svg';
+// @ts-ignore
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 
-const Login = () => {
+const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
   const { t } = useTranslation(['Common']);
   const formik = useFormik({
     initialValues: {
@@ -22,8 +28,21 @@ const Login = () => {
       console.log(value);
     },
   });
+
+  const responseGoogle = (res: any): void => {
+    console.log(res);
+  };
+
+  const responseFacebook = (res: any): void => {
+    console.log(res);
+  };
+
   return (
-    <form className="w-full flex flex-col items-center justify-center" method="POST" onSubmit={formik.handleSubmit}>
+    <form
+      className="w-full flex flex-col items-center justify-center animate__animated animate__fadeInRight"
+      method="POST"
+      onSubmit={formik.handleSubmit}
+    >
       <Input
         value={formik.values.email}
         onChange={formik.handleChange}
@@ -45,13 +64,52 @@ const Login = () => {
         error={formik.errors.password && formik.touched.password ? formik.errors.password : false}
       />
       <div className="flex justify-between items-center w-4/6 pb-3">
-        <CheckBox name="Remember" value="Remember" label="Remember" onChange={formik.handleChange} />
+        <CheckBox
+          name="Remember"
+          value="Remember"
+          label={t('Common:checkbox-remember')}
+          onChange={formik.handleChange}
+        />
         <div className="hover-primary text-sm text-gray-600 cursor-pointer">{t('Common:form-password-lost')}</div>
       </div>
       <Button className="w-4/6 mb-2" type="submit">
         {t('Common:button-login')}
       </Button>
-      <div className="text-sm text-primary cursor-pointer">{t('Common:form-or-sign-up')}</div>;
+      <div className="flex w-4/6 justify-center items-center pb-3">
+        <GoogleLogin
+          clientId="22234867800-4shnc1g407oks72lciep89ht3kdaeqfn.apps.googleusercontent.com"
+          buttonText="Login"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          cookiePolicy={'single_host_origin'}
+          render={(renderProps) => (
+            <img
+              src={GoogleIcon}
+              alt="google-auth"
+              className="w-8 h-8 cursor-pointer mx-5"
+              onClick={renderProps.onClick}
+            />
+          )}
+        />
+        <FacebookLogin
+          appId="441079470350681"
+          autoLoad={false}
+          callback={responseFacebook}
+          // @ts-ignore
+          render={(renderProps) => (
+            <img
+              src={FacebookIcon}
+              alt="google-auth"
+              className="w-8 h-8 cursor-pointer mx-5"
+              onClick={renderProps.onClick}
+            />
+          )}
+        />
+      </div>
+      <div className="text-sm text-primary cursor-pointer" onClick={() => onChange()}>
+        {t('Common:form-or-sign-up')}
+      </div>
+      ;
     </form>
   );
 };
