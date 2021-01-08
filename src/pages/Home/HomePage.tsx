@@ -7,6 +7,7 @@ import HomeSlider from './Slider';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from 'reducers';
 import { toggleMenuSldier } from 'actions/ui';
+import Footer from './Footer';
 
 function HomePage(): React.ReactElement {
   // const { t } = useTranslation('HomePage');
@@ -24,6 +25,7 @@ function HomePage(): React.ReactElement {
         <HeaderHome />
         <LoginContainer isLaptop={isLaptop} />
         <HomeSlider />
+        <Footer />
         <div className="home__layer absolute w-full h-20 md:h-full inset-0"></div>
         {openMenuSlider && (
           <div

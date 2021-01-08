@@ -48,16 +48,6 @@
   .home__header {
     max-width: 75rem;
 
-    &--sticky {
-      @extend .home__header;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 100;
-      background-color: rgba(0, 0, 0, 0.479);
-      height: 10rem;
-    }
-
     .home__header__right {
       min-width: 12rem;
 
@@ -132,12 +122,24 @@
 @include md-up {
   .home__container {
     animation: moving 20s linear infinite;
+
+    .home__footer {
+      height: 25%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
   }
 }
 
 @include md-down {
   .home__container {
     background: rgba(0, 0, 0, 0.815) !important;
+    &--slider-active {
+      @extend .home__container;
+      transform: translateX(-20rem);
+      // overflow: visible;
+    }
   }
   .home__login-container {
     position: relative;
@@ -153,6 +155,16 @@
       height: auto !important;
       background-color: $primary !important;
     }
+  }
+
+  .home__slider {
+    top: 0;
+    left: 100%;
+    width: 20rem !important;
+  }
+
+  .home__footer {
+    background: rgba(0, 0, 0, 0.925);
   }
 }
 

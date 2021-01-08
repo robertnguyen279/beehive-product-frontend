@@ -14,7 +14,7 @@ const LoginContainer = ({ isLaptop }: HomeChild): React.ReactElement => {
     <div className="home__login-container__left md:w-1/2 h-full flex items-center justify-center sm:py-16 py-10">
       <div className="w-4/5 text-white md:block flex flex-col items-center justify-center">
         <div className="text-2xl font-bold font-title">{t('join-club')}</div>
-        <div className="text-sm py-5">{t('join-club-description')}</div>
+        <div className="text-sm md:py-5 pt-2 pb-5">{t('join-club-description')}</div>
         <div
           className={`flex items-center flex-col md:flex-row items-center pb-5 ${
             isLaptop ? 'animate__animated animate__fadeInDown' : ''
