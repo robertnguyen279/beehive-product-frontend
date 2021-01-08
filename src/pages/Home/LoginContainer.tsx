@@ -6,6 +6,7 @@ import OnlineShopIcon from 'assets/icons/online-shop.svg';
 import JobSearchIcon from 'assets/icons/job-search.svg';
 import LogoIcon from 'assets/icons/logo-icon.svg';
 import LoginRegisterForm from 'components/LoginRegisterForm';
+import i18next from 'i18next';
 
 const LoginContainer = ({ isLaptop }: HomeChild): React.ReactElement => {
   const { t } = useTranslation(['HomePage', 'Common']);
@@ -20,7 +21,11 @@ const LoginContainer = ({ isLaptop }: HomeChild): React.ReactElement => {
             isLaptop ? 'animate__animated animate__fadeInDown' : ''
           }`}
         >
-          <div className="w-12 h-12 mr-5 flex items-center justify-center border border-white rounded">
+          <div
+            className={`w-12 h-12 mr-5 ${
+              i18next.language === 'vi' ? 'md:w-16' : ''
+            } flex items-center justify-center border border-white rounded`}
+          >
             <img src={CommunityIcon} alt="community" className="w-4/6" />
           </div>
           <div className="text-center md:text-left">

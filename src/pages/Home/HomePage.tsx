@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from 'reducers';
 import { toggleMenuSldier } from 'actions/ui';
 import Footer from './Footer';
+import BackgroundImg from 'assets/imgs/login-background.jpg';
 
 function HomePage(): React.ReactElement {
   const openMenuSlider = useSelector((state: RootState) => state.ui.openMenuSlider);
@@ -18,7 +19,10 @@ function HomePage(): React.ReactElement {
   };
 
   return (
-    <div className={`home__container${openMenuSlider ? '--slider-active' : ''} h-screen min-w-full relative`}>
+    <div
+      className={`home__container${openMenuSlider ? '--slider-active' : ''} h-screen min-w-full relative`}
+      style={{ background: `url('${BackgroundImg}')` }}
+    >
       <HeaderHome />
       <LoginContainer isLaptop={isLaptop} />
       <HomeSlider />
