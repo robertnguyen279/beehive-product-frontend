@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should render correctly 1`] = `
+<div
+  className="loading"
+>
+  <span
+    className="loading__meter"
+  />
+</div>
+`;
