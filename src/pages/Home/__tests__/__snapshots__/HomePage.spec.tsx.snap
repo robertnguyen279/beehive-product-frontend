@@ -1,37 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomePage should render correctly 1`] = `
-<ContextProvider
-  value={
+<div
+  className="home__container h-screen min-w-full relative"
+  style={
     Object {
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
-      "subscription": Subscription {
-        "handleChangeWrapper": [Function],
-        "listeners": Object {
-          "notify": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": null,
-      },
+      "background": "url('test-file-stub')",
     }
   }
 >
-  <HomePage />
-</ContextProvider>
+  <HeaderHome />
+  <LoginContainer />
+  <HomeSlider />
+  <Footer />
+  <div
+    className="home__layer absolute w-full h-20 md:h-full inset-0"
+  />
+</div>
 `;
