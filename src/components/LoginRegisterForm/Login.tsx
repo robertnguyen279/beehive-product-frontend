@@ -6,7 +6,7 @@ import Button from 'components/Button';
 import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { LoginRegisterForm } from 'types/main';
+import { LoginRegisterForm } from 'types';
 import GoogleLogin from 'react-google-login';
 import GoogleIcon from 'assets/icons/google.svg';
 import FacebookIcon from 'assets/icons/facebook.svg';

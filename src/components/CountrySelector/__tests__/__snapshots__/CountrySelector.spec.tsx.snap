@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountrySelector should render correctly 1`] = `
+<ForwardRef(InternalSelect)
+  onChange={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent!important",
+      "minWidth": "8rem",
+    }
+  }
+>
+  <Option
+    value="en"
+  >
+    <div
+      className="flex items-center justify-between relative"
+    >
+      <div>
+        English
+      </div>
+      <img
+        alt="english"
+        className="w-5"
+        src="test-file-stub"
+      />
+    </div>
+  </Option>
+  <Option
+    value="vi"
+  >
+    <div
+      className="flex items-center justify-between relative"
+    >
+      <div>
+        Tiếng Việt
+      </div>
+      <img
+        alt="vietnamese"
+        className="w-5 "
+        src="test-file-stub"
+      />
+    </div>
+  </Option>
+</ForwardRef(InternalSelect)>
+`;

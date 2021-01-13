@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render correctly 1`] = `
+<div
+  className="home__footer relative z-10 py-5 text-white text-sm flex justify-center"
+>
+  <div
+    className="px-3 cursor-pointer md:pt-16"
+  >
+    footer-link-home
+  </div>
+  <div
+    className="px-3 cursor-pointer md:pt-16"
+  >
+    footer-link-aboutus
+  </div>
+  <div
+    className="px-3 cursor-pointer md:pt-16"
+  >
+    footer-link-faqs
+  </div>
+  <div
+    className="px-3 cursor-pointer md:pt-16"
+  >
+    footer-link-blog
+  </div>
+  <div
+    className="px-3 cursor-pointer md:pt-16"
+  >
+    footer-link-contact
+  </div>
+</div>
+`;

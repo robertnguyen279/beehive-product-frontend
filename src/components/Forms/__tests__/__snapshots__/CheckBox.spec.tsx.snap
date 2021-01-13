@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox should render correctly 1`] = `
+<div
+  className="form__checkbox flex items-center "
+>
+  <input
+    className="z-10"
+    id="test"
+    name="test"
+    onChange={[Function]}
+    type="checkbox"
+    value="test"
+  />
+  <span
+    className="form__checkbox__checkmark"
+  >
+    .
+  </span>
+  <label
+    className="pl-3 cursor-pointer text-sm text-gray-600"
+    htmlFor="test"
+  >
+    test
+  </label>
+</div>
+`;

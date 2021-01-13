@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputType } from 'types/main';
+import { InputType } from 'types';
 
 const Input = ({
   type,

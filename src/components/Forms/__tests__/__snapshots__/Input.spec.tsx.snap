@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly 1`] = `
+<div
+  className="form__input--error relative "
+  style={Object {}}
+>
+  <input
+    className="bg-gray-50 px-5 font-xl w-full h-10"
+    name="test"
+    onChange={[Function]}
+    type="text"
+    value="test"
+  />
+  <span
+    className="relative text-sm text-red-600"
+  >
+    test
+  </span>
+</div>
+`;

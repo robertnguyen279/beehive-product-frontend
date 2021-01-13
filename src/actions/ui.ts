@@ -1,4 +1,4 @@
-import { Action } from 'types/main';
+import { Action } from 'types';
 
 export const Types = {
   OPEN_MENU_SLIDER: 'ui/open-menu-slider',

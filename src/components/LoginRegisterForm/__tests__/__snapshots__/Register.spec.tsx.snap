@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register should render correctly 1`] = `
+<form
+  className="w-full flex flex-col items-center justify-center animate__animated animate__fadeInRight"
+  method="POST"
+  onSubmit={[Function]}
+>
+  <Input
+    className="mb-3 w-4/6"
+    error={false}
+    name="email"
+    onChange={[Function]}
+    placeholder="Common:form-email-placeholder"
+    prefixIcon="test-file-stub"
+    type="text"
+    value=""
+  />
+  <Input
+    className="mb-3 w-4/6"
+    error={false}
+    name="password"
+    onChange={[Function]}
+    placeholder="Common:form-password-placeholder"
+    prefixIcon="test-file-stub"
+    type="password"
+    value=""
+  />
+  <Input
+    className="mb-3 w-4/6"
+    error={false}
+    name="confirmPassword"
+    onChange={[Function]}
+    placeholder="Common:form-password-confirm-placeholder"
+    prefixIcon="test-file-stub"
+    type="password"
+    value=""
+  />
+  <Button
+    className="w-4/6 mb-2"
+    type="submit"
+  >
+    Common:button-signup
+  </Button>
+  <div
+    className="text-sm text-primary cursor-pointer"
+    onClick={[Function]}
+  >
+    Common:form-or-login
+  </div>
+</form>
+`;

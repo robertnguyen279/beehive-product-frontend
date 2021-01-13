@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should render correctly 1`] = `
+<button
+  className="button text-sm text-white "
+  onClick={[MockFunction]}
+>
+  Simulate button
+</button>
+`;
