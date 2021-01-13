@@ -9,7 +9,7 @@ interface Action {
   payload?: any;
 }
 
-export default function users(state = INITIAL_STATE, action: Action): any {
+export default function ui(state = INITIAL_STATE, action: Action): any {
   switch (action.type) {
     case Types.OPEN_MENU_SLIDER: {
       return {

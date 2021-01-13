@@ -6,7 +6,7 @@ import Button from 'components/Button';
 import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { LoginRegisterForm } from 'types/main';
+import { LoginRegisterForm } from 'types';
 
 const Register = ({ onChange }: LoginRegisterForm): React.ReactElement => {
   const { t } = useTranslation(['Common']);

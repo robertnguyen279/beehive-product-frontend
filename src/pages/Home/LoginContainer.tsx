@@ -1,5 +1,4 @@
 import React from 'react';
-import { HomeChild } from 'types/main';
 import { useTranslation } from 'react-i18next';
 import CommunityIcon from 'assets/icons/community.svg';
 import OnlineShopIcon from 'assets/icons/online-shop.svg';
@@ -7,8 +6,10 @@ import JobSearchIcon from 'assets/icons/job-search.svg';
 import LogoIcon from 'assets/icons/logo-icon.svg';
 import LoginRegisterForm from 'components/LoginRegisterForm';
 import i18next from 'i18next';
+import { useMediaQuery } from 'react-responsive';
 
-const LoginContainer = ({ isLaptop }: HomeChild): React.ReactElement => {
+const LoginContainer = (): React.ReactElement => {
+  const isLaptop = useMediaQuery({ query: '(min-width: 768px)' });
   const { t } = useTranslation(['HomePage', 'Common']);
 
   const renderLeftLogin = () => (

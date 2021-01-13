@@ -11,9 +11,10 @@
     "noImplicitReturns": true,
     "sourceMap": true,
     "strict": true,
-    "types": ["eslint", "node"],
+    "types": ["eslint", "node", "jest"],
     "paths": {
-      "public/*": ["../public/*"]
+      "public/*": ["../public/*"],
+      "src/*": ["./*"]
     }
   },
   "exclude": ["node_modules", "**/__tests__/**"]

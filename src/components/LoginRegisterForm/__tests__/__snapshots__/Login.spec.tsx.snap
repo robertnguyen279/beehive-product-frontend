@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render correctly 1`] = `
+<form
+  className="w-full flex flex-col items-center justify-center animate__animated animate__fadeInRight"
+  method="POST"
+  onSubmit={[Function]}
+>
+  <Input
+    className="mb-3 w-4/6"
+    error={false}
+    name="email"
+    onChange={[Function]}
+    placeholder="Common:form-email-placeholder"
+    prefixIcon="test-file-stub"
+    type="text"
+    value=""
+  />
+  <Input
+    className="mb-3 w-4/6"
+    error={false}
+    name="password"
+    onChange={[Function]}
+    placeholder="Common:form-password-placeholder"
+    prefixIcon="test-file-stub"
+    type="password"
+    value=""
+  />
+  <div
+    className="flex justify-between items-center w-4/6 pb-3"
+  >
+    <CheckBox
+      label="Common:checkbox-remember"
+      name="Remember"
+      onChange={[Function]}
+      value="Remember"
+    />
+    <div
+      className="hover-primary text-sm text-gray-600 cursor-pointer"
+    >
+      Common:form-password-lost
+    </div>
+  </div>
+  <Button
+    className="w-4/6 mb-2"
+    type="submit"
+  >
+    Common:button-login
+  </Button>
+  <div
+    className="flex w-4/6 justify-center items-center py-3"
+  >
+    <y
+      accessType="online"
+      buttonText="Login"
+      clientId="22234867800-4shnc1g407oks72lciep89ht3kdaeqfn.apps.googleusercontent.com"
+      cookiePolicy="single_host_origin"
+      disabledStyle={
+        Object {
+          "opacity": 0.6,
+        }
+      }
+      fetchBasicProfile={true}
+      icon={true}
+      isSignedIn={false}
+      onFailure={[Function]}
+      onRequest={[Function]}
+      onSuccess={[Function]}
+      prompt=""
+      render={[Function]}
+      scope="profile email"
+      tag="button"
+      theme="light"
+      type="button"
+      uxMode="popup"
+    />
+    <t
+      appId="441079470350681"
+      authType=""
+      autoLoad={false}
+      callback={[Function]}
+      cookie={false}
+      disableMobileRedirect={false}
+      fields="name"
+      isMobile={false}
+      language="en_US"
+      onFailure={null}
+      redirectUri="http://localhost/"
+      render={[Function]}
+      responseType="code"
+      returnScopes={false}
+      scope="public_profile,email"
+      state="facebookdirect"
+      version="2.3"
+      xfbml={false}
+    />
+  </div>
+  <div
+    className="text-sm text-primary cursor-pointer"
+    onClick={[Function]}
+  >
+    Common:form-or-sign-up
+  </div>
+</form>
+`;
