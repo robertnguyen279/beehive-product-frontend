@@ -16,6 +16,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@testing-library/react": "^11.2.3",
     "@types/antd": "^1.0.0",
     "@types/axios": "^0.14.0",
     "@types/enzyme": "^3.10.8",

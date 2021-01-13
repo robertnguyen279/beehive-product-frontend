@@ -1,18 +1,16 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import Header from '../Header';
 import { shallow } from 'enzyme';
-import configureStore from 'redux-mock-store';
-// const clickFn = jest.fn();
-const mockStore = configureStore([]);
-const store = mockStore({});
+// import { useSelector, useDispatch } from 'react-redux';
+
+const mockDispatch = jest.fn();
+jest.mock('react-redux', () => ({
+  useSelector: jest.fn(),
+  useDispatch: () => mockDispatch,
+}));
 
 describe('Header', () => {
-  const component = shallow(
-    <Provider store={store}>
-      <Header />
-    </Provider>,
-  );
+  const component = shallow(<Header />);
 
   it('should render correctly', () => {
     expect(component).toMatchSnapshot();
