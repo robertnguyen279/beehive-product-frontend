@@ -7,15 +7,34 @@ import { RootState } from 'reducers';
 import { toggleMenuSldier } from 'actions/ui';
 import Footer from './Footer';
 import BackgroundImg from 'assets/imgs/login-background.jpg';
+import { useHistory } from 'react-router-dom';
+import { getUser } from 'actions/users';
+import LoadingScreen from 'components/LoadingScreen';
 
 function HomePage(): React.ReactElement {
   const openMenuSlider = useSelector((state: RootState) => state.ui.openMenuSlider);
-
+  const user = useSelector((state: RootState) => state.users.user);
+  const getUserError = useSelector((state: RootState) => state.users.getUserError);
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  if (user) {
+    history.push('/activities');
+  }
 
   const handleToggleMenuSlider = (): void => {
     dispatch(toggleMenuSldier());
   };
+
+  React.useEffect(() => {
+    if (getUserError === undefined) {
+      dispatch(getUser());
+    }
+  }, []);
+
+  if (!getUserError) {
+    return <LoadingScreen />;
+  }
 
   return (
     <div

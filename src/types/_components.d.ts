@@ -1,9 +1,5 @@
 import React from 'react';
 
-export interface HomeChild {
-  isLaptop: boolean;
-}
-
 export interface InputType {
   type: string;
   onChange: (value: React.FormEvent<HTMLInputElement>) => void;

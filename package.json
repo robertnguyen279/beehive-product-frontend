@@ -5,10 +5,8 @@
     "clean": "trash /dist",
     "dev": "yarn clean && cross-env NODE_ENV=development webpack-cli serve --config webpack.config.dev.babel.js",
     "build": "yarn clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.babel.js",
-    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "tslint": "tslint -t codeFrame -c tslint.json \"**/*.tsx\" \"**/*.d.ts\"",
     "test": "jest --runInBand --coverage --silent",
-    "lint": "yarn eslint && yarn tslint"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "keywords": [],
   "author": "Robert Nguyen <robert.nguyen279@gmail.com>",
