@@ -12,9 +12,12 @@ import GoogleIcon from 'assets/icons/google.svg';
 import FacebookIcon from 'assets/icons/facebook.svg';
 // @ts-ignore
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import { loginUser } from 'actions/users';
+import { useDispatch } from 'react-redux';
 
 const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
   const { t } = useTranslation(['Common']);
+  const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -24,8 +27,8 @@ const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
       email: Yup.string().email(t('Common:form-email-error')).required(t('Common:form-required')),
       password: Yup.string().required(t('Common:form-required')),
     }),
-    onSubmit: (value) => {
-      console.log(value);
+    onSubmit: ({ email, password }) => {
+      dispatch(loginUser({ email, password }));
     },
   });
 
@@ -95,6 +98,7 @@ const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
           appId="441079470350681"
           autoLoad={false}
           callback={responseFacebook}
+          fields="name,email,picture"
           // @ts-ignore
           render={(renderProps) => (
             <img

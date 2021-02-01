@@ -13,8 +13,7 @@
     "strict": true,
     "types": ["eslint", "node", "jest"],
     "paths": {
-      "public/*": ["../public/*"],
-      "src/*": ["./*"]
+      "public/*": ["../public/*"]
     }
   },
   "exclude": ["node_modules", "**/__tests__/**"]

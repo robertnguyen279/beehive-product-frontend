@@ -16,6 +16,13 @@ export default function users(state = INITIAL_STATE, action: Action): any {
       };
     }
 
+    case Types.GET_USER_ERROR: {
+      return {
+        ...state,
+        getUserError: true,
+      };
+    }
+
     default: {
       return state;
     }
