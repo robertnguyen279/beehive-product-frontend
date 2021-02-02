@@ -10,27 +10,39 @@ import BackgroundImg from 'assets/imgs/login-background.jpg';
 import { useHistory } from 'react-router-dom';
 import { getUser } from 'actions/users';
 import LoadingScreen from 'components/LoadingScreen';
+import { message } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 function HomePage(): React.ReactElement {
   const openMenuSlider = useSelector((state: RootState) => state.ui.openMenuSlider);
   const user = useSelector((state: RootState) => state.users.user);
   const getUserError = useSelector((state: RootState) => state.users.getUserError);
+  const loginUserError = useSelector((state: RootState) => state.users.loginUserError);
   const dispatch = useDispatch();
   const history = useHistory();
-
-  if (user) {
-    history.push('/activities');
-  }
+  const { t } = useTranslation('Common');
 
   const handleToggleMenuSlider = (): void => {
     dispatch(toggleMenuSldier());
   };
 
   React.useEffect(() => {
+    if (user) {
+      history.push('/activities');
+    }
+
     if (getUserError === undefined) {
       dispatch(getUser());
     }
-  }, []);
+
+    if (loginUserError && loginUserError.includes('Incorrect password')) {
+      message.error(t('password-incorrect'));
+    }
+
+    if (loginUserError && loginUserError.includes('User existed')) {
+      message.error(t('user-existed'));
+    }
+  }, [loginUserError, getUserError, user]);
 
   if (!getUserError) {
     return <LoadingScreen />;

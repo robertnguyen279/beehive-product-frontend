@@ -7,9 +7,12 @@ import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { LoginRegisterForm } from 'types';
+import { useDispatch } from 'react-redux';
+import { createUser } from 'actions/users';
 
 const Register = ({ onChange }: LoginRegisterForm): React.ReactElement => {
   const { t } = useTranslation(['Common']);
+  const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -23,8 +26,8 @@ const Register = ({ onChange }: LoginRegisterForm): React.ReactElement => {
         .required(t('Common:form-required'))
         .oneOf([Yup.ref('password'), null], t('Common:form-password-confirm-error')),
     }),
-    onSubmit: (value) => {
-      console.log(value);
+    onSubmit: ({ email, password }) => {
+      dispatch(createUser({ email, password }));
     },
   });
   return (

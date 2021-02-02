@@ -10,5 +10,7 @@
   "form-or-sign-up": "Hoặc đăng ký ngay",
   "checkbox-remember": "Ghi nhớ",
   "button-signup": "Đăng ký",
-  "form-or-login": "Hoặc đăng nhập"
+  "form-or-login": "Hoặc đăng nhập",
+  "password-incorrect": "Sai mật khẩu",
+  "user-existed": "Người dùng đã tồn tại"
 }

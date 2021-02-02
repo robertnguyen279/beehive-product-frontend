@@ -12,7 +12,7 @@ import GoogleIcon from 'assets/icons/google.svg';
 import FacebookIcon from 'assets/icons/facebook.svg';
 // @ts-ignore
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
-import { loginUser } from 'actions/users';
+import { loginUser, loginByGoogle, loginByFacebook } from 'actions/users';
 import { useDispatch } from 'react-redux';
 
 const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
@@ -27,17 +27,22 @@ const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
       email: Yup.string().email(t('Common:form-email-error')).required(t('Common:form-required')),
       password: Yup.string().required(t('Common:form-required')),
     }),
-    onSubmit: ({ email, password }) => {
-      dispatch(loginUser({ email, password }));
+    // @ts-ignore
+    onSubmit: ({ email, password, remember }) => {
+      dispatch(loginUser({ email, password, remember }));
     },
   });
 
   const responseGoogle = (res: any): void => {
-    console.log(res);
+    const { familyName, givenName, imageUrl, email } = res.profileObj;
+    dispatch(
+      loginByGoogle({ firstName: familyName, lastName: givenName, avatar: imageUrl, email, token: res.tokenId }),
+    );
   };
 
   const responseFacebook = (res: any): void => {
-    console.log(res);
+    const { name, email } = res;
+    dispatch(loginByFacebook({ name, email, avatar: res.picture.data.url }));
   };
 
   return (
@@ -68,8 +73,8 @@ const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
       />
       <div className="flex justify-between items-center w-4/6 pb-3">
         <CheckBox
-          name="Remember"
-          value="Remember"
+          name="remember"
+          value="remember"
           label={t('Common:checkbox-remember')}
           onChange={formik.handleChange}
         />
