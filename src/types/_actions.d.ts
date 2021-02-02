@@ -22,3 +22,8 @@ export type LoginByFacebook = {
   email: string;
   avatar: string;
 };
+
+export type CreateUser = {
+  password: string;
+  email: string;
+};

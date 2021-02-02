@@ -1,4 +1,4 @@
-import { Action, LoginUser, LoginByGoogle, LoginByFacebook } from 'types';
+import { Action, LoginUser, LoginByGoogle, LoginByFacebook, CreateUser } from 'types';
 
 export const Types = {
   GET_USER_SUCCESS: 'user/get-user-success',
@@ -8,6 +8,7 @@ export const Types = {
   LOGIN_USER_ERROR: 'user/login-user-error',
   LOGIN_BY_GOOGLE: 'user/login-by-google',
   LOGIN_BY_FACEBOOK: 'user/login-by-facebook',
+  CREATE_USER: 'user/create-user',
 };
 
 export const getUser = (): Action => ({
@@ -58,5 +59,13 @@ export const loginByFacebook = ({ name, email, avatar }: LoginByFacebook): Actio
     name,
     email,
     avatar,
+  },
+});
+
+export const createUser = ({ password, email }: CreateUser): Action => ({
+  type: Types.CREATE_USER,
+  payload: {
+    password,
+    email,
   },
 });

@@ -68,6 +68,28 @@ function* watchLoginByFacebook() {
   yield takeLatest(actions.Types.LOGIN_BY_FACEBOOK, loginByFacebook);
 }
 
-const userSagas = [fork(watchGetUsers), fork(watchLoginUser), fork(watchLoginByGoogle), fork(watchLoginByFacebook)];
+function* createUser(action: Action) {
+  try {
+    const result = yield call(api.createUser, action.payload);
+    localStorage.setItem('beehive-auth', result.data.token);
+    yield put(actions.getUserSuccess({ ...result.data.user }));
+  } catch (e) {
+    if (e.response.data.code === 11000) {
+      yield put(actions.loginUserError('User existed - ' + uuid()));
+    }
+  }
+}
+
+function* watchCreateUser() {
+  yield takeLatest(actions.Types.CREATE_USER, createUser);
+}
+
+const userSagas = [
+  fork(watchGetUsers),
+  fork(watchLoginUser),
+  fork(watchLoginByGoogle),
+  fork(watchLoginByFacebook),
+  fork(watchCreateUser),
+];
 
 export default userSagas;
