@@ -1,4 +1,4 @@
-import { Action, LoginUser } from 'types';
+import { Action, LoginUser, LoginByGoogle, LoginByFacebook } from 'types';
 
 export const Types = {
   GET_USER_SUCCESS: 'user/get-user-success',
@@ -6,6 +6,8 @@ export const Types = {
   LOGIN_USER: 'user/login-user',
   GET_USER_ERROR: 'user/get-user-error',
   LOGIN_USER_ERROR: 'user/login-user-error',
+  LOGIN_BY_GOOGLE: 'user/login-by-google',
+  LOGIN_BY_FACEBOOK: 'user/login-by-facebook',
 };
 
 export const getUser = (): Action => ({
@@ -36,5 +38,25 @@ export const loginUserError = (error: string): Action => ({
   type: Types.LOGIN_USER_ERROR,
   payload: {
     error,
+  },
+});
+
+export const loginByGoogle = ({ firstName, lastName, avatar, email, token }: LoginByGoogle): Action => ({
+  type: Types.LOGIN_BY_GOOGLE,
+  payload: {
+    firstName,
+    lastName,
+    avatar,
+    email,
+    token,
+  },
+});
+
+export const loginByFacebook = ({ name, email, avatar }: LoginByFacebook): Action => ({
+  type: Types.LOGIN_BY_FACEBOOK,
+  payload: {
+    name,
+    email,
+    avatar,
   },
 });

@@ -11,5 +11,6 @@
   "checkbox-remember": "Ghi nhớ",
   "button-signup": "Đăng ký",
   "form-or-login": "Hoặc đăng nhập",
-  "password-incorrect": "Sai mật khẩu"
+  "password-incorrect": "Sai mật khẩu",
+  "user-existed": "Người dùng đã tồn tại"
 }

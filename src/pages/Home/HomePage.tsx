@@ -38,6 +38,10 @@ function HomePage(): React.ReactElement {
     if (loginUserError && loginUserError.includes('Incorrect password')) {
       message.error(t('password-incorrect'));
     }
+
+    if (loginUserError && loginUserError.includes('User existed')) {
+      message.error(t('user-existed'));
+    }
   }, [loginUserError, getUserError, user]);
 
   if (!getUserError) {

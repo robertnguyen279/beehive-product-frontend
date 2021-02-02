@@ -36,6 +36,38 @@ function* watchLoginUser() {
   yield takeLatest(actions.Types.LOGIN_USER, loginUser);
 }
 
-const userSagas = [fork(watchGetUsers), fork(watchLoginUser)];
+function* loginByGoogle(action: Action) {
+  try {
+    const result = yield call(api.loginByGoogle, action.payload);
+    localStorage.setItem('beehive-auth', result.data.token);
+    yield put(actions.getUserSuccess({ ...result.data.user }));
+  } catch (e) {
+    if (e.response.data.code === 11000) {
+      yield put(actions.loginUserError('User existed - ' + uuid()));
+    }
+  }
+}
+
+function* watchLoginByGoogle() {
+  yield takeLatest(actions.Types.LOGIN_BY_GOOGLE, loginByGoogle);
+}
+
+function* loginByFacebook(action: Action) {
+  try {
+    const result = yield call(api.loginByFacebook, action.payload);
+    localStorage.setItem('beehive-auth', result.data.token);
+    yield put(actions.getUserSuccess({ ...result.data.user }));
+  } catch (e) {
+    if (e.response.data.code === 11000) {
+      yield put(actions.loginUserError('User existed - ' + uuid()));
+    }
+  }
+}
+
+function* watchLoginByFacebook() {
+  yield takeLatest(actions.Types.LOGIN_BY_FACEBOOK, loginByFacebook);
+}
+
+const userSagas = [fork(watchGetUsers), fork(watchLoginUser), fork(watchLoginByGoogle), fork(watchLoginByFacebook)];
 
 export default userSagas;

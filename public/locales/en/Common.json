@@ -11,5 +11,6 @@
   "checkbox-remember": "Remember",
   "button-signup": "Sign up",
   "form-or-login": "Or login",
-  "password-incorrect": "Incorrect Password"
+  "password-incorrect": "Incorrect Password",
+  "user-existed": "User is already existed"
 }

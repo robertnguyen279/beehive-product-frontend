@@ -8,3 +8,17 @@ export type LoginUser = {
   password: string;
   remember?: any;
 };
+
+export type LoginByGoogle = {
+  firstName: string;
+  lastName: string;
+  avatar: string;
+  email: string;
+  token: string;
+};
+
+export type LoginByFacebook = {
+  name: string;
+  email: string;
+  avatar: string;
+};
