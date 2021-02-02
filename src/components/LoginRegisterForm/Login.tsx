@@ -27,8 +27,9 @@ const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
       email: Yup.string().email(t('Common:form-email-error')).required(t('Common:form-required')),
       password: Yup.string().required(t('Common:form-required')),
     }),
-    onSubmit: ({ email, password }) => {
-      dispatch(loginUser({ email, password }));
+    // @ts-ignore
+    onSubmit: ({ email, password, remember }) => {
+      dispatch(loginUser({ email, password, remember }));
     },
   });
 
@@ -68,8 +69,8 @@ const Login = ({ onChange }: LoginRegisterForm): React.ReactElement => {
       />
       <div className="flex justify-between items-center w-4/6 pb-3">
         <CheckBox
-          name="Remember"
-          value="Remember"
+          name="remember"
+          value="remember"
           label={t('Common:checkbox-remember')}
           onChange={formik.handleChange}
         />

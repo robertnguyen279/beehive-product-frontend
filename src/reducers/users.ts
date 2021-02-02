@@ -13,13 +13,20 @@ export default function users(state = INITIAL_STATE, action: Action): any {
       return {
         ...state,
         user: action.payload,
+        loginUserError: undefined,
+        getUserError: undefined,
       };
     }
-
     case Types.GET_USER_ERROR: {
       return {
         ...state,
         getUserError: true,
+      };
+    }
+    case Types.LOGIN_USER_ERROR: {
+      return {
+        ...state,
+        loginUserError: action.payload.error,
       };
     }
 

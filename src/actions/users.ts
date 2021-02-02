@@ -5,6 +5,7 @@ export const Types = {
   GET_USER: 'user/get-user',
   LOGIN_USER: 'user/login-user',
   GET_USER_ERROR: 'user/get-user-error',
+  LOGIN_USER_ERROR: 'user/login-user-error',
 };
 
 export const getUser = (): Action => ({
@@ -22,16 +23,17 @@ export const getUserError = (): Action => ({
   type: Types.GET_USER_ERROR,
 });
 
-export const loginUser = ({ email, password }: LoginUser): Action => ({
+export const loginUser = ({ email, password, remember }: LoginUser): Action => ({
   type: Types.LOGIN_USER,
   payload: {
     email,
     password,
+    remember,
   },
 });
 
 export const loginUserError = (error: string): Action => ({
-  type: Types.LOGIN_USER,
+  type: Types.LOGIN_USER_ERROR,
   payload: {
     error,
   },

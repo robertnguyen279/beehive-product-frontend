@@ -10,5 +10,6 @@
   "form-or-sign-up": "Or sign up now",
   "checkbox-remember": "Remember",
   "button-signup": "Sign up",
-  "form-or-login": "Or login"
+  "form-or-login": "Or login",
+  "password-incorrect": "Incorrect Password"
 }

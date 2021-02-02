@@ -6,4 +6,5 @@ export type Action = {
 export type LoginUser = {
   email: string;
   password: string;
+  remember?: any;
 };
