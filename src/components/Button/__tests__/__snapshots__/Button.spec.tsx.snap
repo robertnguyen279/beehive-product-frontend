@@ -2,7 +2,7 @@
 
 exports[`Loading should render correctly 1`] = `
 <button
-  className="button text-sm text-white "
+  className="button text-sm text-white cursor-pointer "
   onClick={[MockFunction]}
 >
   Simulate button
