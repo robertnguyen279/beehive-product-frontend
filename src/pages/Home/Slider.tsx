@@ -8,7 +8,7 @@ const { Panel } = Collapse;
 const HomeSlider = () => {
   const { t } = useTranslation('HomePage');
   return (
-    <div className="home__slider z-10 absolute p-10">
+    <div className="home__slider z-10 absolute p-10 overflow-y-scroll overflow-hidden max-h-screen">
       <div className="text-xl font-bold text-gray-600">{t('slider-mainmenu')}</div>
       <hr className="my-5" />
       <div className="text-sm cursor-pointer hover-primary py-3 text-primary">{t('footer-link-home')}</div>

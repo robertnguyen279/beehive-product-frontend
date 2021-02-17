@@ -31,9 +31,9 @@ exports[`Login should render correctly 1`] = `
   >
     <CheckBox
       label="Common:checkbox-remember"
-      name="Remember"
+      name="remember"
       onChange={[Function]}
-      value="Remember"
+      value="remember"
     />
     <div
       className="hover-primary text-sm text-gray-600 cursor-pointer"
@@ -81,7 +81,7 @@ exports[`Login should render correctly 1`] = `
       callback={[Function]}
       cookie={false}
       disableMobileRedirect={false}
-      fields="name"
+      fields="name,email,picture"
       isMobile={false}
       language="en_US"
       onFailure={null}
