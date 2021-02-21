@@ -15,7 +15,7 @@ const api = {
 };
 
 interface Props {
-  child?: React.ReactNode;
+  comp?: React.ReactNode;
 }
 
 type MenuItem = {
@@ -187,7 +187,7 @@ const TopLayout = (props: Props) => {
           </div>
         </div>
         <div className="flex items-start mt-20">
-          <div style={{ marginRight: `${width + 6 * 16}px` }}>{props.child}</div>
+          <div style={{ marginRight: `${width + 6 * 16}px` }}>{props.comp}</div>
           <div ref={ref} className="fixed w-1/4 right-24 shadow h-screen">
             member layout
           </div>

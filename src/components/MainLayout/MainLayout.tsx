@@ -12,7 +12,7 @@ const MainLayout = (props: Props) => {
   return (
     <div className="flex items-start">
       <LeftLayout />
-      <TopLayout child={props.children} />
+      <TopLayout comp={props.children} />
       <Rightlayout />
     </div>
   );
