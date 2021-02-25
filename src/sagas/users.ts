@@ -7,7 +7,7 @@ import { v4 as uuid } from 'uuid';
 function* getUser() {
   try {
     const result = yield call(api.getUser);
-    yield put(actions.getUserSuccess({ ...result.data.user }));
+    yield put(actions.getUserSuccess({ ...result.data }));
   } catch (e) {
     yield put(actions.getUserError());
   }
